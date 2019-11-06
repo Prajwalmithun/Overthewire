@@ -56,3 +56,19 @@ execute rot13_3.py
 $ python3 rot13_3.py
 password for Level 12: 5Te8Y4drgCRfCx8ugdwuEX8KFC6k2EUu
 
+Level 12 -> Level 13
+------------------------
+Step 1 : Create a directory as /tmp/prajwal
+	$ mkdir /tmp/prajwal
+Step 2 : Move the file (data.txt) to that directory
+	$ mv data.txt /tmp/prajwal/data.txt
+Step 3 : Convert hexdump into normal text
+	$ xxd -r data.txt > new
+Then use these commands based on the type of the file
+$ file <filename>  #to know the type of the file
+$ gunzip <filename.gz>  # to unzip .gz foramted files(if not in .gz format rename it)
+$ bzip2 -d <filename> # if the file type is bzip2
+$ tar xvf <filename>  # if its tar archive file
+
+Password for Level13 : 8ZjyCRiBWFYkneahHwxCv3wb2a1ORpYL
+
