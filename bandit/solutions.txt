@@ -2,7 +2,7 @@ Level 0
 $ ssh bandit0@bandit.overthewire.org -p2220
 password for level 0: bandit0
 
-Level0 -> Level 1
+Level 0 -> Level 1
 $ cat readme
 
 Copy the password, its for next level
@@ -43,15 +43,15 @@ Level8 -> Level9
 $ sort data.txt | unique -u
 password for Level9 : UsvVyFSfZZWbi6wgC7dAFyFuR6jQQUhR
 
-Level9 -> Level10
+Level 9 -> Level10
 $ stringd data.txt | grep ^=
 password for Level 10: truKLdjsbJ5g7yyJ2X2R0o3a5HQJFuLk
 
-Level10 -> Level11
+Level 10 -> Level11
 $ base64 --decode data.txt
 password for Level11: IFukwKGsFW8MOq3IRFqrxE1hxTNEbUPR
 
-Level11 -> Level12
+Level 11 -> Level 12
 execute rot13_3.py
 $ python3 rot13_3.py
 password for Level 12: 5Te8Y4drgCRfCx8ugdwuEX8KFC6k2EUu
@@ -71,4 +71,15 @@ $ bzip2 -d <filename> # if the file type is bzip2
 $ tar xvf <filename>  # if its tar archive file
 
 Password for Level13 : 8ZjyCRiBWFYkneahHwxCv3wb2a1ORpYL
+----------------------
+Level 13 -> Level 14
+----------------------
+Step 1 : Copy the sshkey.private to local machine and change the permission,.
+	$ chmod 600 sshkey.private
+Step 2 : Use this private key to enter into level 14
+	$ ssh -i sshkey.private bandit14@bandit.labs.overthewire.org
+Only private key is enough to enter into Level 14
+Password for level 14 : 4wcYUJFw0k0XLShlDzztnTBHiqxU3b3e
+-----------------------
 
+Level 14 -> Level 15
